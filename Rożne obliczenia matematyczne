@@ -1,0 +1,195 @@
+import math
+PI = math.pi
+print(PI)
+print("a - plaskie b - bryły c - obwody d - objętości e - wysokosc trojkata równobocznego f -  przekątna kwadratu g - twierdzenie pitagorasa")
+inp = input("a / b / c / d / e / f / g ? ")
+if "a" == inp:
+    print('''
+    a - pp kwadatu
+    b - pp prostokata
+    c - pp trapezu
+    d - pp kola
+    e - pp trojkata
+    f - pp rombu
+    g - pp rownolegloboku
+    h - pp trójkata równobocznego
+
+
+    ''')
+    inp = input("? ")
+    if inp == "a":
+        a = float(input())
+        print(f"ppKwadratu o boku {a} = {a**2}")
+    elif inp == "b":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        print(f"ppProstokata o bokach {a} i {b} = {a*b}")
+    elif inp == "c":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        h = float(input("h = "))
+        print(f"ppTrapezu o podstawach {a}, {b} i wysokosci {h} = {(a+b)*h/2}")
+    elif inp == "d":
+        r = float(input("r = "))
+        print(f"ppKola o promieniu {r} = {PI*r**2}")
+    elif inp == "e":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"ppTrojkata o podstawie {a} i wysokosci {h} = {a*h/2}")
+    elif inp == "f":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"ppRombu o podstawie {a} i wysokosci {h} = {a*h}")
+    elif inp == "g":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"ppRownolegloboku o podstawie {a} i wysokosci {h} = {a*h}")
+    elif inp == "h":
+        a = float(input("a = "))
+        print(f"ppTrojkata rownobocznego o boku {a} = {a**2*math.sqrt(3)/4}")
+    else:
+        print("nie ma takiej opcji")
+
+
+elif "b" == inp:
+    print('''
+    a - pp szescianu
+    b - pp prostoadloscianu
+    c - pp graniastoslupa
+    d - ostrosłupa
+    e - pp walca
+    f - pp stozka
+    g - pp kuli
+    
+
+    ''')
+    inp = input("?")
+    if inp == "a":
+        a = float(input("a = "))
+        print(f"ppSzecianu dla a={a} = {a**2*6}")
+    elif inp == "b":   
+        a = float(input("a = "))
+        b = float(input("b = "))
+        print(f"ppProstopadloscianu dla a={a} i b={b} = {a*b*2 + 2*(a+b)}")
+    elif inp == "c":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"ppGraniastoslupa dla a={a} i h={h} = {a**2 + 4*a*h}")
+    elif inp == "d":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"ppOstroslupa dla a={a} i h={h} = {a**2 + 4*a*h/3}")
+    elif inp == "e":
+        r = float(input("r = "))
+        h = float(input("h = "))
+        print(f"ppWalca dla r={r} i h={h} = {2*PI*r*h + 2*PI*r**2}")
+    elif inp == "f":
+        r = float(input("r = "))
+        h = float(input("h = "))
+        print(f"ppStozka dla r={r} i h={h} = {PI*r**2 + PI*r*math.sqrt(r**2 + h**2)}")
+    elif inp == "g":
+        r = float(input("r = "))
+        print(f"ppKuli dla r={r} = {4/3*PI*r**3}")
+    else:
+        print("nie ma takiej opcji")
+elif "c" == inp:
+    print('''
+    a - obwód kwadratu
+    b - obwód prostokąta
+    c - obwód trapezu
+    d - obwód koła
+    e - obwód trójkąta
+    f - obwód rombu
+    g - obwód równoległoboku
+    h - obwód trójkąta równobocznego
+
+
+    ''')
+    inp = input("? ")
+    if inp == "a":
+        a = float(input())
+        print(f"obwód kwadratu o boku {a} = {4*a}")
+    elif inp == "b":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        print(f"obwód prostokąta o bokach {a} i {b} = {2*(a+b)}")
+    elif inp == "c":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        c = float(input("c = "))
+        d = float(input("d = "))
+        print(f"obwód trapezu o bokach {a}, {b}, {c} i {d} = {a+b+c+d}")
+    elif inp == "d":
+        r = float(input("r = "))
+        print(f"obwód koła o promieniu {r} = {2*PI*r}")
+    elif inp == "e":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        c = float(input("c = "))
+        print(f"obwód trójkąta o bokach {a}, {b} i {c} = {a+b+c}")
+    elif inp == "f":
+        a = float(input("a = "))
+        print(f"obwód rombu o boku {a} = {4*a}")
+    elif inp == "g":
+        a = float(input("a = "))
+        b = float(input("b = "))
+        print(f"obwód równoległoboku o bokach {a} i {b} = {2*(a+b)}")
+    elif inp == "h":
+        a = float(input("a = "))
+        print(f"obwód trójkąta równobocznego o boku {a} = {3*a}")
+    else:
+        print("nie ma takiej opcji")    
+
+elif "d" == inp:
+    print('''
+    a - objętość sześcianu
+    b - objętość prostopadłościanu
+    c - objętość graniastosłupa
+    d - objętość ostrosłupa
+    e - objętość walca
+    f - objętość stożka
+    g - objętość kuli
+  
+''')
+    inp = input("?")
+    if inp == "a":
+        a = float(input("a = "))
+        print(f"objętość sześcianu dla a={a} = {a**3}")
+    elif inp == "b":   
+        a = float(input("a = "))
+        b = float(input("b = "))
+        c = float(input("c = "))
+        print(f"objętość prostopadłościanu dla a={a}, b={b} i c={c} = {a*b*c}")
+    elif inp == "c":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"objętość graniastosłupa dla a={a} i h={h} = {a**2*h}")
+    elif inp == "d":
+        a = float(input("a = "))
+        h = float(input("h = "))
+        print(f"objętość ostrosłupa dla a={a} i h={h} = {a**2*h/3}")
+    elif inp == "e":
+        r = float(input("r = "))
+        h = float(input("h = "))
+        print(f"objętość walca dla r={r} i h={h} = {PI*r**2*h}")
+    elif inp == "f":
+        r = float(input("r = "))
+        h = float(input("h = "))
+        print(f"objętość stożka dla r={r} i h={h} = {PI*r**2*h/3}")
+    elif inp == "g":
+        r = float(input("r = "))
+        print(f"objętość kuli dla r={r} = {4/3*PI*r**3}")
+    else:
+        print("nie ma takiej opcji")
+elif "e" == inp:
+    a = float(input("a = "))
+    print(f"Wysokość trójkąta równobocznego o boku {a} = {a*math.sqrt(3)/2}")
+elif "f" == inp:
+    a = float(input("a = "))
+    print(f"Przekątna kwadratu o boku {a} = {a*math.sqrt(2)}")
+elif "g" == inp:
+    a = float(input("a = "))
+    b = float(input("b = "))
+    print(f"Przeciwprostokątna trojkąta prostokątnego o przyprostokątnych {a} i {b} = {math.sqrt(a**2 + b**2)}")
+else:
+    print("nie ma takiej opcji")
