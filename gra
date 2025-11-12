@@ -1,0 +1,92 @@
+import time
+maxhp = 100
+hp = 100
+atk = 20
+mana = 50
+kasa = 100
+potka_sily = 0
+potka_regeneracji = 0
+postac = [hp,maxhp,atk,mana,kasa,potka_sily,potka_regeneracji]
+
+while postac[0] >= 0:
+    print("walka - a," 
+    "regeneracja - b," 
+    "mana regeneracji - c, " 
+    "sklep - d"
+    "uzyj potki - e")
+    Smok = [30,30]
+    inp = input()
+    if inp == "a":
+        while Smok[0] >= 0:
+            print(postac)
+            print(Smok)
+            postac[0] -= Smok[1]
+            Smok[0] -= postac[1]
+            postac[3] +=  5
+            print(postac)
+    if inp == "b" and mana >= 0 and hp <= maxhp :
+        regen = 30
+        postac[0] += 30
+        postac[2] -= 25
+        print(postac)
+    if inp == "c":
+        reg_mana = 5
+        postac[2] += reg_mana
+        print(postac)
+    if inp == "d":
+        print("co kupujesz:\n"
+        
+        "ulepszenie ataku - a\n"  
+        "ulepszenie many - b\n" \
+        "ulepszenie hp - c\n" \
+        "kupic potki - d")
+        inp2 = input("Wybierz opcję:")
+        if inp2 == "a" and postac[4] >= 200:
+            ulepszenie_atk = [200,10]
+            atk += ulepszenie_atk[1]
+            kasa -= ulepszenie_atk[0]
+            print("Ulepszyłeś atak! Nowy atak:", postac[1])
+        elif inp2 == "b" and postac[4] >= 250:
+            ulepszenie_mana = [250,15]
+            mana += ulepszenie_mana[1]
+            kasa -= ulepszenie_mana[0]
+            print("Ulepszyłeś manę! Nowa mana:", postac[2])
+        elif inp2 == "c" and postac[4] >= 150:
+            ulepszenie_hp = [150,35]
+            postac[0] +=  ulepszenie_hp[0]    
+            kasa -=  ulepszenie_hp[1]
+            postac[0] += ulepszenie_hp[0]
+            print("Ulepszyłeś HP! Nowe HP:", postac[0])  
+        elif inp2 == "d"  and postac[4] >= 300:
+            inp3 = input("wybierz potki")
+            print("wybierz potke:" \
+            "potka sily - a" \
+            "potka regeneracji - b")
+
+            if inp3 == "a":
+                potka_sily += 1
+                kasa -= 300
+                print("kupiles potke sily!")
+            if inp3 == "b":
+                potka_regeneracji += 1
+                kasa -= 300
+                print("kupiles potke regeneracji!")
+        else:
+            print("Nie masz wystarczająco złota lub wybrałeś złą opcję.")
+    if inp == "e":
+        inp2 = input("jaka potke pijesz")
+        if inp2 == "a" and potka_sily >= 1:
+            print("Wypijasz potkę siły! +10 do ataku na 10 sekund.")
+            postac[1] += 10
+            time.sleep(40)
+            postac[1] -= 10
+            print("Efekt potki minął. Obecny atak:", postac[1])
+            inp2 == "b" and potka_regeneracji >= 1
+            print("Wypiłes potke  +10 do ataku na 10 sekund.")
+            postac[1] += 10
+            time.sleep(30)
+            postac[1] -= 10
+            print("Efekt miną. Obecny atak:", postac[1])    
+        else:
+            print("brak potek")
+print("game over")
