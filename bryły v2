@@ -1,0 +1,31 @@
+import plaskie
+import bryly
+
+while True:
+    inp:str = input().lower()
+    if inp == "x":
+        break
+    elif inp == "a":
+        a:float = float(input("a: "))
+        b:float = float(input("b: "))
+        wynik = plaskie.pp_prostokat(a,b)
+        print(f"ppProstokata = {wynik}")
+    elif inp == "b":
+        a:float = float(input("a: "))
+        h:float = float(input("h: "))
+        wynik = plaskie.pp_rownoleglobok(a,h)
+        print(f"ppRownolegloboka = {wynik}")
+    elif inp == "c":
+        a:float = float(input("a: "))
+        h:float = float(input("h: "))
+        wynik = plaskie.pp_romb(a,h)
+        print(f"ppRomba = {wynik}")
+    elif inp == "d":
+        a:float = float(input("a: "))
+        wynik = plaskie.pp_kwadrat(a)
+        print(f"ppKwadratu = {wynik}")
+    elif inp == "e":
+        a:float = float(input("a: "))
+        h:float = float(input("h: "))
+        wynik = plaskie.pp_trojkat(a,h)
+        print(f"ppTrojkat = {wynik}")
