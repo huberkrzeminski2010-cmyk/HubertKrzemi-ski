@@ -29,3 +29,27 @@ while True:
         h:float = float(input("h: "))
         wynik = plaskie.pp_trojkat(a,h)
         print(f"ppTrojkat = {wynik}")
+    elif inp == "f":
+        r:float = float(input("r: "))
+        wynik = plaskie.pp_kolo(r)
+        print(f"ppKola = {wynik}")
+    elif inp == "g":
+        a:float = float(input("a: "))
+        b:float = float(input("b: "))
+        c:float = float(input("c: "))
+        wynik = bryly.v_prostopadloscian(a,b,c)
+        print(f"ob Prostopadloscianu = {wynik}")
+    elif inp == "h":
+        a:float = float(input("a: "))
+        wynik = bryly.v_szescian(a)
+        print(f"ob Szescianu = {wynik}")
+    elif inp == "i":
+        r:float = float(input("r: "))
+        h:float = float(input("h: "))
+        wynik = bryly.v_stozek(r,h)
+        print(f"ob Stozka = {wynik}")
+    elif inp == "j":    
+        r:float = float(input("r: "))
+        h:float = float(input("h: "))
+        wynik = bryly.v_walec(r,h)
+        print(f"ob Walca = {wynik}")
